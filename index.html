@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+ File: index.html
+ Assignment: Scrabble Game
+ Sindhuja Ghale, UMass Lowell Computer Science, Sindhuja_Ghale@student.uml.edu
+ Copyright (c) 2023 by Sindhuja Ghale. All rights reserved. May be
+ freely copied or excerpted for educational purposes with credit to the
+ author.
+ Updated by SG on June 30, 2023 at 7:00 PM
+ Brief Overview: This is a Scrabble game using drag-and-drop. In the game, along with HTML and CSS, I worked with jQuery UI. This game is not fully functional like the way we play at home or online but it mostly serves the purposes given in the assignment rubrics.
+ Sources of Help: w3school, Class Notes, GeeksforGeeks, and Stack Overflows. 
+-->
+
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css" rel="stylesheet">
+    <title>Scrabble Game</title>
+    
+    <!-- JavaScript file and jQuery plugins--> 
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.0-rc.3/jquery-ui.js" integrity="sha256-tYLuvehjddL4JcVWw1wRMB0oPSz7fKEpdZrIWf3rWNA=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-simulate/1.1.1/jquery.simulate.js"></script>
+    
+    <script type="text/json" src="../graphics_data/pieces.json"></script>
+    <script src="javascript/holder.js"></script>
+    <script src="javascript/bag.js"></script>
+    <script src="javascript/objects.js"></script>
+    <script src="javascript/script.js"></script>
+</head>
+
+<body>
+    <div id="gameHeader"></div>
+    
+    <div id="mainDiv">
+        <p id="gameTitle">scrabble</p>
+        
+        <!-- Container for the game board tiles -->
+        <div id="board_row" class="boardTileRow"></div>
+        
+        <!-- Container for game pieces -->
+        <div id="pieces"></div>
+        
+        <div id="gameInfo">
+            <!-- Container for game over information -->
+            <div id="gameOverInfo"></div>
+            
+            <!-- Container for while game is still being played -->
+            <div id="activeGame">
+                <p id="currentWord">Current Word:</p>
+                <p id="Score">Score: 0 + (0)</p>
+                <p id="remainTiles">Remaining Tiles: 93</p>
+                
+                <div id="btns">
+                    <!-- Buttons for game actions -->
+                    <button id="reRollBtn" class="gameBtn">Re-draw Rack</button>
+                    <button id="nextWordBtn" class="gameBtn">Next Word</button>
+                    <button id="restartBtn" class="gameBtn">Restart Game</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <p id="warning">THANKS FOR VISITING THE PAGE</p>
+    
+</body>
+</html>
