@@ -1,1 +1,129 @@
+/*
+ File: style.css
+ Assignment: Scrabble Game
+ Sindhuja Ghale, UMass Lowell Computer Science, Sindhuja_Ghale@student.uml.edu
+ Copyright (c) 2023 by Sindhuja Ghale. All rights reserved. May be
+ freely copied or excerpted for educational purposes with credit to the
+ author.
+ Updated by SG on June 30, 2023 at 7:00 PM
+ Brief Overview: This is a Scrabble game using drag-and-drop. In the game, along with HTML and CSS, I worked with jQuery UI. This game is not fully functional like the way we play at home or online but it mostly serves the purposes given in the assignment rubrics.
+ Sources of Help: w3school, Class Notes, GeeksforGeeks, and Stack Overflows. 
+*/
 
+@font-face {
+  font-family: scrabbleFont;
+  src: url(Scramblemixed-YEdO.ttf);
+}
+
+
+/* Styling for the game title */
+#gameTitle {
+  text-align: center;
+  font-family: scrabbleFont; /* Custom font for the game title */
+  font-size: 150px;
+  margin: auto;
+  margin-bottom: 40px;
+  width: fit-content;
+  background-color: firebrick;
+  border-radius: 15px;
+  border: 5px solid;
+  padding: 0 20px;
+}
+
+/* Styling for the main container */
+#mainDiv {
+  width: 1170px;
+  height: fit-content;
+  padding: 50px;
+  padding-top: 10px;
+  border-radius: 15px;
+  border: 5px solid;
+  margin: auto;
+  background-color: blanchedalmond;
+}
+
+/* Styling for the game board row */
+#board_row {
+  height: 150px;
+  position: relative;
+}
+
+/* Styling for the individual board tiles */
+.boardTile {
+  float: left;
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  border: 3px solid;
+}
+
+/* Styling for the holder element */
+#holder {
+  position: absolute;
+  margin-top: -40px;
+}
+
+/* Styling for the piece holder */
+#pieceHolder {
+  position: relative;
+  width: 640px;
+  height: 75px;
+}
+
+/* Styling for the game pieces container */
+#pieces {
+  position: relative;
+  width: 640px;
+  height: 182px;
+  margin: auto;
+  clear: both;
+}
+
+/* Styling for the game pieces */
+.gamePiece {
+  cursor: move;
+  position: absolute;
+  float: left;
+  height: 75px;
+  width: 75px;
+}
+
+/* Styling for the game info section */
+#gameInfo {
+  display: block;
+  background-color: firebrick;
+  border: 5px solid;
+  width: fit-content;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 20px;
+  padding: 5px 15px;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Styling for the game buttons */
+.gameBtn {
+  display: block;
+  margin: auto;
+  width: 150px;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  transition: background-color 0.1s;
+}
+
+/* Styling for the warning message */
+#warning {
+  text-align: center;
+  color: black;
+  width: fit-content;
+  margin: auto;
+  margin-top: 5px;
+  height: fit-content;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
